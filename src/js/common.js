@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		var brands = new Swiper(reviewSlider, {
 			slidesPerView: 1,
 			spaceBetween: 100,
+			autoHeight: true,
 			loop: true,
 			navigation: {
 		        nextEl: '.review__list .swiper-button-next',

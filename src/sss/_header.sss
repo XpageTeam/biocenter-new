@@ -27,10 +27,16 @@
 		&:not(:first-child)
 			margin-left: 40px
 
+		&.active
+			a
+				border-color: currentColor
+				
 		&-link
 			color: inherit
 			border-bottom: 1px solid transparent
 			transition: border-color .3s ease-in-out
+
+
 
 			&:hover
 				border-color: currentColor
@@ -58,3 +64,28 @@
 
 			&:nth-child(1)
 				max-width: 130px
+
+@media (max-width: 660px)
+	
+	.head
+		flex-direction: column
+
+		&-logo
+			width: 100%
+			padding: 0 20px
+
+	.head-cont
+		padding: 15px 0
+
+		.wrapper
+			padding: 0
+
+	.menu
+		&__list
+			overflow-x: auto
+			width: 100vw
+			padding: 10px 20px
+
+		&__item-link
+			white-space: nowrap
+
