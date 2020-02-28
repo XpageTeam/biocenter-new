@@ -1,0 +1,65 @@
+.profiles-faq
+	&-cont
+		margin: 100px 0
+
+	&__title
+		font-weight: bold
+		font-size: em(33)
+		line-height: calc(40 / 33)
+		text-align: center
+		color: #383838
+		margin-bottom: 60px
+		text-align: center
+
+	&__list
+		counter-reset: i
+
+	&__item
+		position: relative
+		counter-increment: i
+		padding-left: 75px
+		padding-bottom: 40px
+
+		&:not(:last-child)
+			margin-bottom: 20px
+			border-bottom: 1px solid #E6E6E6
+
+
+		&:before
+			content: counter(i) 
+			position: absolute
+			top: 0
+			left: 0
+			color: var(--main-color)
+			font-weight: bold
+			font-size: em(30)
+
+
+		&-title
+			font-weight: 500
+			font-size: em(16)
+			line-height: calc(26 / 16)
+			margin-bottom: 10px
+
+		&-text
+			line-height: calc(23 / 14)
+
+@media (max-width: 1500px)
+	
+	.profiles-faq
+		&-cont
+			margin: 50px 0
+
+		&__item
+			padding-bottom: 20px
+
+
+@media (max-width: 1000px)
+	
+	.profiles-faq__title
+		font-size: 2em
+
+	.profiles-faq__item
+		padding-left: 55px
+
+	

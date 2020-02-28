@@ -1,0 +1,484 @@
+.burger
+	z-index: 100
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	box-sizing: content-box
+	size: 24px 15px
+	padding: 15px
+	background: 0 0
+	border: 0
+	margin: -15px -15px -15px 20px
+	cursor: pointer
+
+	&:before 
+		display: none
+
+
+	span
+		position: relative
+		display: inline-block
+		width: 24px
+		height: 1px
+		vertical-align: bottom
+		background: #000
+		transition: background .2s .4s
+
+		&:before
+			border-radius: 0
+			transform: none
+			content: ""
+			position: absolute
+			right: 0
+			top: 8px
+			width: 24px
+			height: 1px
+			background: #000
+			transform-origin: 50% 50%
+			transition: top .3s .3s ease, transform .3s ease, width .3s ease
+
+		&:after
+			content: ""
+			position: absolute
+			right: 0
+			top: -8px
+			width: 24px
+			height: 1px
+			background: #000
+			transform-origin: 50% 50%
+			transition: top .3s .3s ease, transform .3s ease, width .3s ease
+
+
+
+body:not(.js__menu--open)
+	.mobile-menu
+		opacity: 0
+		pointer-events: none
+
+.js__menu--open
+	overflow: hidden
+
+	.burger 
+		> span
+			background: 0 0
+	.burger 
+		> span
+			&:before
+				transform: rotate3d(0,0,1,45deg)
+				top: 0
+				transition: top .3s,transform .3s .5s
+				width: 24px
+				background: #000
+	.burger 
+		> span
+			&:after 
+				transform: rotate3d(0,0,1,-45deg)
+				top: 0
+				transition: top .3s,transform .3s .5s
+				width: 24px
+				background: #000
+
+	.mobile-menu
+		transform: translate3d(0,0,0)
+
+.js__open-filter
+	.aside
+		.burger 
+			> span
+				background: 0 0
+		.burger 
+			> span
+				&:before
+					transform: rotate3d(0,0,1,45deg)
+					top: 0
+					transition: top .3s,transform .3s .5s
+					width: 24px
+					background: #000
+		.burger 
+			> span
+				&:after 
+					transform: rotate3d(0,0,1,-45deg)
+					top: 0
+					transition: top .3s,transform .3s .5s
+					width: 24px
+					background: #000
+
+.mobile-menu
+	width: 100%
+	background-color: #fff
+	z-index: 10000
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	display: flex
+	flex-direction: column
+	transform: translate3d(-100%,0,0)
+	transition: transform .3s ease-in-out
+
+	.main-nav__sub-submenu
+		display: block !important
+
+
+
+
+	&__submenu
+		overflow-x: hidden
+		overflow-y: auto
+		height: calc(100vh - 90px)
+
+		&-title
+			background-color: var(--thrid-color)
+			padding: 12px 25px 12px 75px
+
+	&__header
+		padding: 25px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex: none
+
+	&-scroll
+		position: relative
+		display: flex
+		flex-direction: column
+		height: calc(100vh - 84px)
+		overflow-x: hidden
+		overflow-y: auto
+		flex: 1 1 auto
+
+
+
+	&__list
+		li
+			&:nth-child(2)
+				display: none
+
+	&__footer
+		border-top: 1px solid var(--border-color)
+		flex: none
+		z-index: 9999
+		position: relative
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		display: none
+
+
+
+		&-links
+			display: flex
+			flex-direction: column
+			padding: 10px 25px
+			flex: none
+
+			a
+				display: flex
+				align-items: center
+				line-height: 1
+
+				&:only-child
+					margin-bottom: 0
+
+		&-phone
+			background-color: var(--second-color)
+			padding: 10px 25px
+			display: flex
+			align-items: center
+
+			a
+				color: #fff
+				margin-left: auto
+
+	&__lang
+		display: flex
+		align-items: center
+
+		&:after
+			content: ''
+			display: block
+			size: 6px
+			background-image: url('../img/ico-arrow.svg')
+			background-position: right center
+			background-repeat: no-repeat
+			margin-left: 13px
+			filter: invert(1)
+
+
+		select
+			background-color: var(--second-color)
+			border: 0
+			color: #fff
+
+
+
+	&__enter
+		position: relative
+		margin-bottom: 15px
+
+		&:before
+			content: ''
+			display: block
+			size: 16px 17px
+			background-image: url('../img/ico-user.svg')
+			background-repeat: no-repeat
+			background-position: 50%
+			margin-right: 18px
+
+	&__reg
+		position: relative
+
+		&:before
+			content: ''
+			display: block
+			size: 23px
+			border-radius: 50%
+			background-color: var(--main-color)
+			background-image: url('../img/ico-cross.svg')
+			background-repeat: no-repeat
+			background-position: 50%
+			margin-right: 14px
+
+
+
+
+	&__logo
+		size: 97px 34px
+
+		svg
+			size: 97px 34px
+
+	&__city
+		margin: 0 auto
+		white-space: nowrap
+		display: flex
+		align-items: center
+
+		&:after
+			content: ''
+			display: block
+			size: 6px
+			background-image: url('../img/ico-arrow.svg')
+			background-repeat: no-repeat
+			background-position: right center
+			margin-left: 10px
+
+		select
+			border: 0
+			padding-right: 12px
+
+	.main-nav__sub-submenu
+		position: static
+		opacity: 1
+		pointer-events: all
+		display: none
+
+		&:before
+			display: none !important
+
+
+
+
+	&__submenu
+		z-index: 999
+		background-color: #fff
+		position: absolute
+		// overflow-y: auto
+		// overflow-x: hidden
+		top: 0
+		// bottom: calc(44px + 50px)
+		width: 100%
+		left: 0
+		transform: translate3d(-100%,0,0)
+		transition: transform .3s ease-in-out
+		// height: calc(100vh - 44px - 50px)
+
+
+
+	&__item
+
+		&--submenu
+			overflow-y: auto
+			overflow-x: hidden
+
+			> .mobile-menu-title
+				position: relative
+
+				&:after
+					content: ''
+					display: block
+					size: 10px 8px
+					position: absolute
+					right: 25px
+					top: calc(50% - 4px)
+					background-image: url('../img/ico-arrow-right.svg')
+					background-repeat: no-repeat
+					background-position: 50%
+
+		&.js__menu-opened
+
+			.mobile-menu__submenu
+				transform: translate3d(0,0,0)
+
+		a, .mobile-menu-title
+			display: block
+			background-repeat: no-repeat
+			padding: 12px 25px 
+
+		&:first-child
+			// margin-bottom: 10px
+
+			> *:first-child
+				padding: 22px 25px
+
+		> *:first-child
+			display: block
+
+		&:nth-child(1)
+			background-color: var(--thrid-color)
+
+.js__mobile-menu--open
+	.mobile-menu
+		&__cities
+			transform: translate3d(0,0,0)
+
+
+.mobile-menu
+
+	&__back
+		position: relative
+		height: 62px
+		background-color: var(--thrid-color)
+		padding: 0 25px
+		display: flex
+		align-items: center
+
+		&:after
+			content: ''
+			display: block
+			size: 10px 8px
+			position: absolute
+			right: 25px
+			top: calc(50% - 4px)
+			background-image: url('../img/ico-arrow-right.svg')
+			background-repeat: no-repeat
+			background-position: 50%
+			transform: rotate(180deg)
+
+
+	&__submenu
+
+
+		&-title
+
+			&[style*="background-image"]
+				background-position: left 25px center
+				background-repeat: no-repeat
+				padding: 12px 25px 12px 75px
+
+	&__cities
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		height: 50vh
+		background-color: #fff
+		box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08)
+		padding: 40px 25px 0
+		z-index: 10000
+		display: flex
+		flex-direction: column
+		transform: translate3d(0,100%,0)
+		transition: transform .4s ease
+
+		.cities__search-cont
+			border-top: 0
+			margin: 0
+			padding: 0
+
+		.cities__list
+			column-count: auto
+			column-gap: 0
+			overflow-y: auto
+			height: calc(100% - 150px)
+
+		.cities__search
+			margin-bottom: 30px
+
+			&-input
+				width: 100%
+
+		.back
+			position: relative
+			margin-top: auto
+			height: 50px
+			background-color: var(--second-color)
+			color: #fff
+			text-align: center
+			display: flex
+			align-items: center
+			justify-content: center
+			margin: auto -25px 0
+
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				left: 25px
+				top: calc(50% - 5px)
+				size: 10px
+				background-image: url("../img/ico-arrow-right.svg")
+				filter: invert(1)
+				transform: rotate(180deg)
+				background-repeat: no-repeat
+				background-position: 50%
+
+
+@media (min-width: 1000px)
+
+	.burger
+		display: none
+
+	.mobile-menu
+		display: none
+
+@media (max-width: 667px)
+	
+	.cities__list-main
+		column-count: auto
+
+	.cities__search
+		&-label
+			display: none
+
+		.bx-sls .bx-ui-sls-container
+			min-height: 41px !important
+
+		.bx-sls .bx-ui-sls-fake, .bx-sls .bx-ui-sls-route
+			height: 41px !important
+
+		.bx-sls .dropdown-block
+			border: 1px solid var(--border-color) !important
+			border-radius: 100px !important
+			box-shadow: none !important
+
+		.bx-sls .dropdown-icon
+			top: 14px
+
+		.bx-sls .dropdown-fade2white
+			border-radius: 100px
+
+		.bx-sls .bx-ui-sls-clear
+			top: 3px
+
+		.bx-sls .bx-ui-sls-pane
+			border: 1px solid var(--border-color)
+			box-shadow: none
+			top: 41px
+
+
+@media (max-width: 370px)
+	
+	.burger
+		margin: -15px -15px -15px 0px

@@ -1,0 +1,46 @@
+.advantages
+	&-cont
+		margin: 100px 0 
+
+	
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin: 0 0 -50px -50px
+
+	&__item
+		width: calc((100% - 50px * 3) / 3)
+		margin: 0 0 50px 50px
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		&-ico
+			size: 80px
+			border-radius: 50%
+			background-color: var(--main-color)
+			flex: none
+			display: flex
+			justify-content: center
+			align-items: center
+			font-size: em(25)
+			line-height: 1
+			color: #fff
+			margin-bottom: 35px
+
+		&-title
+			font-weight: 500
+			font-size: em(18)
+			line-height: calc(23 / 18)
+			text-align: center
+
+		&-text
+			text-align: center
+			font-size: em(14)
+			line-height: calc(23 / 14)
+			margin-top: 15px
+
+@media (max-width: 1500px)	
+	
+	.advantages-cont
+		margin: 50px 0

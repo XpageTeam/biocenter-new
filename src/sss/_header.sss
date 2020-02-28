@@ -1,0 +1,60 @@
+.head
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+	&-cont
+		position: absolute 0 0 * 0
+		padding: 65px 0
+		color: #fff
+
+	&-logo
+		display: flex
+		align-items: center
+
+		a
+			margin-right: 65px
+
+		img
+			display: block
+
+
+.menu
+	&__list
+		display: flex
+
+	&__item
+		&:not(:first-child)
+			margin-left: 40px
+
+		&-link
+			color: inherit
+			border-bottom: 1px solid transparent
+			transition: border-color .3s ease-in-out
+
+			&:hover
+				border-color: currentColor
+
+@media (max-width: 1500px)
+	
+	.head-cont
+		padding: 25px 0
+
+
+@media (max-width: 1200px)
+	
+	.head-logo a
+		margin-right: 30px
+
+
+@media (max-width: 1000px)
+	
+	.menu__item:not(:first-child)
+		margin-left: 20px
+
+	.head-logo
+		a
+			margin-right: 15px
+
+			&:nth-child(1)
+				max-width: 130px

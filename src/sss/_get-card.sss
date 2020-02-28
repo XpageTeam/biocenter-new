@@ -1,0 +1,48 @@
+.get-card
+	display: flex
+	align-items: center
+
+	&-cont
+		background: url('../img/get-card-bg.svg') no-repeat center, var(--main-color)
+		background-size: cover
+		color: #fff
+		padding: 100px 0
+		margin: 100px 0
+
+	&__img
+		flex: none
+		transform: translate3d(-20px,10px,0)
+
+	&__title
+		font-weight: bold
+		font-size: em(33)
+		line-height: calc(40 / 33)
+		margin-bottom: 35px
+
+	&__btn
+		.btn
+			&:not(:last-child)
+				margin-right: 20px
+
+@media (max-width: 1500px)
+	
+	.get-card
+		&-cont
+			margin: 50px 0
+			padding: 50px 0
+
+
+@media (max-width: 1200px)
+	
+	.get-card__img
+		max-width: 275px
+
+
+@media (max-width: 1000px)
+	
+	.get-card
+		align-items: flex-start
+		flex-direction: column
+
+		&__img
+			max-width: 100%

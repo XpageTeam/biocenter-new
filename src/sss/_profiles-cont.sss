@@ -1,0 +1,88 @@
+.profiles
+	&-cont
+		background: url('../img/main-screen-bg.svg') no-repeat center, var(--main-color)
+		background-size: cover
+		color: #fff
+		padding: 100px 0
+		margin: 100px 0
+
+	&__title
+		font-weight: bold
+		font-size: em(33)
+		line-height: calc(40 / 33)
+		margin-bottom: 60px
+		text-align: center
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin: 0 0 -25px -25px
+
+	&__item
+		width: calc((100% - 25px * 2) / 2)
+		margin: 0 0 25px 25px
+		border: 1px solid currentColor
+		border-radius: 10px
+		padding: 30px
+		display: flex
+		align-items: center
+		transition: background .3s ease-in-out, color .3s ease-in-out
+
+		&:hover
+			background-color: #fff
+			color: #000
+			border-color: #fff
+
+			.profiles__item-ico
+				border-color: var(--main-color)
+
+		&-ico
+			size: 74px
+			border-radius: 50%
+			background-color: #fff
+			display: flex
+			align-content: 
+			justify-content: center
+			border: 1px solid transparent
+
+			flex: none
+			margin-right: 20px
+
+		&-info
+			display: flex
+			flex-direction: column
+
+		&-title
+			font-weight: 500
+			font-size: em(18)
+			line-height: calc(22 / 18)
+			margin-bottom: 10px
+
+		&-text
+			font-size: em(14)
+			line-height: calc(17 / 14)
+			margin-bottom: 15px
+
+		&-price
+			font-size: em(20)
+			line-height: calc(24 / 20)
+			margin-top: auto
+	&__btn
+		margin-top: 55px
+		display: flex
+		justify-content: center
+
+@media (max-width: 1500px)
+	
+	.profiles-cont
+		padding: 50px 0
+		margin: 50px 0
+
+@media (max-width: 1000px)
+	
+	.profiles
+		&__title
+			margin-bottom: 35px
+
+		&__item
+			padding: 20px

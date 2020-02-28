@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Главная
+		include inc/head.pug
+		include inc/css.pug
+	body.main.loading
+		include inc/header.pug
+		main#content
+			section.main-screen-cont
+				.wrapper
+					.main-screen
+						.main-screen__info
+							.main-screen__title Сдавай анализы<br> с выгодой 15%
+							.main-screen__text Получай гарантированные подарки<br> и участвуй в розыгрыше ценных призов
+						.ms-form
+							.ms-form__title Профиль  "Поликлиника"
+							.ms-form__text Безусловная экономия  Ваших денег и времени. Для каждого, кто планирует или постоянно сдает анализы. На все случаи жизни для всей семьи
+							.ms-form__btn
+								a(href="#").btn.fancybox Оставить заявку
+					.partners
+						.partners__list
+							a(href="#").partners__item
+								img(src="img/part-1.svg", alt="")
+							a(href="#").partners__item
+								img(src="img/part-2.svg", alt="")
+							a(href="#").partners__item
+								img(src="img/part-3.svg", alt="")
+							a(href="#").partners__item
+								img(src="img/part-4.svg", alt="")
+					.get-info
+						.get-info__list
+							a(href="").get-info__item
+								.get-info__item-title Получите карту Биоцентр у партнеров
+								.get-info__item-text Посмотреть адреса партнёров
+							a(href="").get-info__item
+								.get-info__item-title Получите гарантированный подарок
+								.get-info__item-text Посмотреть адреса партнёров
+							a(href="").get-info__item
+								.get-info__item-title Сдать анализы
+								.get-info__item-text Посмотреть адреса партнёров
+
+					.main-screen__btn
+						a(href="").btn.btn--color Заказать интерпретацию
+
+			section.advantages-cont
+				.wrapper
+					.advantages
+						.advantages__list
+							.advantages__item
+								.advantages__item-ico 15%
+								.advantages__item-title Экономьте деньги
+								.advantages__item-text -15% от суммы любого чека
+							.advantages__item
+								.advantages__item-ico 20
+								.advantages__item-title Профилей анализов разработаны для Вашего удобства
+								.advantages__item-text Посещайте вашего врача сразу с результатами анализов 
+							.advantages__item
+								.advantages__item-ico
+									img(src="img/ico-clock.svg", alt="")
+								.advantages__item-title Экономьте время
+								.advantages__item-text минус одно посещение к врачу для назначения анализов
+			section.profiles-faq-cont
+				.wrapper
+					.profiles-faq__title Как работают профили<br> "Поликлиника" от БИОЦЕНТР
+					.profiles-faq__list
+						each item, i in [{}, {title: "Выбираете врача, которого собираетесь посетить", text: "Для  основных поликлинических направлений созданы базовые профили анализов. Каждый анализ в профиле подобран таким образом,  что является  необходимым и достаточным , для первого приема у специалиста"}, {title: "Скачиваете необходимый вам профиль от \"Биоцентр\" в формате, который будет удобен именно вам", text: "Переход на сайт в блок с профилями"}, {title: "Предъявляете профиль и карту  в ИНВИТРО, работающем по программе Биоцентр", text: "АДРЕСА МО Инвитро Вы сразу сможете сдать все указанные в профиле  анализы со скидкой 15 %. И инструментальные исследования со скидкой 10% Карта Биоцентр дает возможность сдавать со скидкой не только анализы, указанные в профиле, но и любые другие анализы. "}, {title: "Записываетесь на прием к специалисту после получения результатов всех необходимых анализов", text: "Экономите свое время, посещайте врача с результатами анализов"}, {title: "Сдаете  дополнительные анализы, назначенные врачом со скидкой  15%", text: "Врач назначил дополнительные анализы? Так же сдаете их со скидкой 15%. Ведь карта \"Биоцентр\" дает право на получение скидки на любые анализы в МО Инвитро "}, {title: "Покупаете препараты, назначенные врачом для лечения получаете бонус 6%.", text: "Карта \"Биоцентр\" дает возможность покупать препараты в сети аптек \"Областной аптечный склад\" с выгодой в 6%  ( переход на условия партнерской программы)"}, {title: 'Используете данные анализов для мониторинга состояния здоровья ', text: 'Закажите расшифровку анализов по профилям, и вы получите исчерпывающую информацию о показателях вашего здоровья которые можно использовать как дополнительные материалы во время визита к врачу'}]
+							if(i == 0)
+								.profiles-faq__item
+									.profiles-faq__item-title Получаете  карту "Биоцентр" у наших партнеров
+									.profiles-faq__item-text 
+										a(href="") Список партнеров
+							else
+								.profiles-faq__item
+									.profiles-faq__item-title=item.title
+									.profiles-faq__item-text=item.text
+
+			section.get-card-cont
+				.wrapper
+					.get-card
+						.get-card__img
+							img(src="img/get-card.png", alt="")
+						.get-card__info
+							.get-card__title Получите клубную<br> карту БИОЦЕНТР
+							.get-card__btn
+								a(href="").btn.btn--color Узнать адреса партнеров
+								a(href="").btn.btn--color Узнать где сдать анализы по программе БИОЦЕНТР
+			section.advantages-biocenter-cont
+				.wrapper
+					.ab__title Почему сдавать анализы выгоднее по карте "БИОЦЕНТР"
+					.ab__list
+						each title, i in [{titl: "Быстро и просто", text: "Без лишних визитов к врачу и изучения больших массивов информации в интернете. "}, {titl: "Надёжно", text: "Профиль содержит  достаточные и необходимые анализы для первого приема "}, {titl: "Выгодно", text: "Профиль созданы для экономии денег и времени "}, {titl: "Все как надо ", text: "Вы точно знаете стоимость всех необходимых Вам анализов с максимальной скидкой"}]
+							.ab__item
+								.ab__item-ico
+									img(src="img/ico-tb-"+i+".svg", alt="")
+								.ab__item-title=title.titl
+								.ab__item-text=title.text
+			section.profiles-cont
+				.wrapper
+					.profiles
+						.profiles__title Профили анализов от "БИОЦЕНТР" 
+						.profiles__list
+							each profile, i in [{title: 'Профиль "Терапевт" ', text: 'Все , что необходимо для первичного приема ', price: 'от 2699 руб.'}, {title: 'Профиль "Эндокринолог" ', text: 'Действительно выгодно для тех, кто посещает врача постоянно', price: 'от 3026 рублей.'}, {title: 'Профиль "Гинеколог" ', text: 'Полный набор анализов', price: 'от 4692 руб.'}, {title: 'Профиль "ЛОР" ', text: 'Для детей и взрослых', price: 'от 2652 руб'}, {title: 'Профиль "Уролог" ', text: 'Не нужно ничего изобретать самому', price: 'от 3854 руб.'}, {title: 'Профиль \"Кардиолог\"', text: 'Все, что необходимо для качественного наблюдения ', price: 'от 3200 руб.'}, ]
+								.profiles__item
+									.profiles__item-ico
+										img(src="img/ico-prof-1.svg", alt="")
+									.profiles__item-info
+										.profiles__item-title=profile.title
+										.profiles__item-text=profile.text
+										.profiles__item-price=profile.price 
+						.profiles__btn
+							a(href="").btn.btn--color Подробнее
+			section.stock-info-cont
+				.wrapper
+					.stock-info
+						.stock-info__top
+							.stock-info__top-date До 1 марта 2020 года
+						.stock-info__list
+							.stock-info__item Сдавайте анализы всей семьей 
+							.stock-info__item Регистрируйте до 5 чеков на общую сумму 5000 рублей 
+							.stock-info__item Получайте гарантированные подарки ﻿и участвуйте в розыгрыше 
+						.stock-partners
+							.stock-partners__item
+								figure
+									img(src="img/stock-part-1.svg", alt="")
+								.stock-partners__item-text Подарок на 500 руб.
+							.stock-partners__item
+								figure
+									img(src="img/stock-part-2.svg", alt="")
+								.stock-partners__item-text Подарок на 500 руб.
+							.stock-partners__item
+								figure
+									img(src="img/stock-part-3.svg", alt="")
+								.stock-partners__item-text Подарок на 500 руб.
+						.stock-bonus
+							.stock-bonus__title Среди всех зарегистрированных Участников Акции разыгрываются:
+							.stock-bonus__list
+								.stock-bonus__item Смартчасы Apple Watch 4
+								.stock-bonus__item Фирменные подарки от ХК «Трактор» с автографами игроков основной команды
+								.stock-bonus__item Годовая клубная карта в Фитнес-центр CITRUS FITNES 
+								.stock-bonus__item Сертификат на анализы стоимостью до 5000 рублей в ИНВИТРО по программе БИОЦЕНТР 
+						.stock__btn
+							a(href="").btn Получить электронную карту
+							a(href="").btn Принять участие в розыгрыше
+							a(href="").btn Зарегистрировать чеки
+
+			section.review-cont
+				.wrapper
+					.review
+						.review__title Личный опыт тех, кто уже пользуется по<br> профилям от "БИОЦЕНТР"
+						.review__text Вот что они говорят об программе "Поликлиника" от Биоцентр 
+						.review__list
+							.swiper-button.swiper-button-prev
+							.swiper-button.swiper-button-next
+							.swiper-list
+								.swiper-wrapper
+									- for (let l = 0; l < 4; l++)
+										.swiper-slide
+											.review__item
+												.review__item-top
+													.review__item-name Сергей
+												.review__item-bot
+													.review__item-text
+														p Я как обычно заметил что страховка у меня закончилась вчера. Сидя в автомобили начал искать, где побыстрее её оформить. Перейдя на сайт eeos ко мне обратился страховой консультант, и предложил помочь узнать стоимость полиса на моё авто. Через 5 минут я знал в какой страховой дешевле осаго. Определившись со страховой Евгений заполнил все документы за меня. Я только скинул ему фотографии документов. Ещё через 10 минут Евгений скинул  мне ссылку на сайт страховой для оплаты. Перейдя по ссылки я увидел сайт Альфа страхования с информацией о стоимости полиса и вариантами оплаты. После оплаты страховой полис сразу пришёл мне на email.  Даже не думал, что оформить осаго можно с мобильного телефона. Спасибо, было очень удобно и просто!
+				
+
+
+
+
+			include inc/footer.pug
+		include inc/scripts.pug

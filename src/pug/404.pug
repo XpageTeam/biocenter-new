@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Типовая страница
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading.page-404
+		#app
+			include inc/header.pug
+		
+			main#content
+				.p-404-cont
+					.wrapper
+						.p-404
+							.p-404__number 404
+							.p-404__text
+								.p-404__text-title Мы потеряли эту страницу.<br> Мы посмотрели везде, но так и не нашли то, что вы ищете
+								a.p-404__text-link(href="#")
+									span.p-404-links
+										span.p-404-links__home.home-btn
+										span.p-404-links__text Давайте найдём для вас место получше
+
+
+
+
+
+
+				
+
+									
+
+
+
+			include inc/footer.pug
+		include inc/scripts.pug
+

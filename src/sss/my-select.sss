@@ -1,0 +1,50 @@
+.my-select
+
+	&__list
+		overflow-y: auto
+		max-height: 220px
+		overscroll-behavior: none
+		-webkit-overflow-scrolling: touch
+		overflow-scrolling: touch
+
+		&-cont
+			user-select: none
+			position: absolute calc(100% - 1px) 0 *
+			z-index: 2
+			background: #fff
+			display: none
+			padding: 4px 0
+			border: 1px solid var(--border-color)
+
+		&::-webkit-scrollbar
+			width: 11px
+
+			&-thumb, &-track
+				border-left: 3px solid #fff
+				border-right: 3px solid #fff
+
+			&-thumb
+				background: var(--second-color)
+
+			&-track
+				background: #fff
+		
+		&-option
+			padding: 10px 16px
+			transition: color .3s ease, background-color .3s ease
+
+			&:not(.selected)
+				cursor: pointer
+
+			&:hover, &.selected
+				background: var(--thrid-color)
+
+			&[disabled]
+				pointer-events: none
+				color: #000 !important
+				background-color: var(--second-color) !important
+
+select.js__opened
+
+	~ .my-select__list-cont
+		display: block

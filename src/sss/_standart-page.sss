@@ -1,0 +1,72 @@
+.standart-page
+
+	img
+		border-radius: 5px
+
+	.wrapper
+		max-width: 1300px !important
+
+	&__img
+
+		img
+			display: block
+
+	&__text
+		font-size: 1em
+		font-weight: 400
+		line-height: calc(28 / 15)
+
+
+
+	&__banner
+
+		+ .standart-page__text
+			margin: 65px 0 0
+
+
+.sp-slider
+	overflow: hidden
+	position: relative
+
+	img
+		display: block
+		width: 100%
+
+	&__arrows
+		position: absolute * 54px 150px *
+		display: flex
+
+		.swiper-button
+
+			&-prev
+				margin-right: 16px
+
+			&-next, &-prev
+				background-color: var(--main-color) !important
+
+				&:after
+					border-color: #fff
+
+.standart-page + p
+	margin-left: auto
+	margin-right: auto
+	max-width: 1326px
+	box-sizing: content-box
+	padding: 0 20px
+
+@media (max-width: 1400px)
+	.standart-page
+
+		&__text
+			font-size: 13px
+
+		&__banner
+
+			+ .standart-page__text
+				margin: 40px 0 0
+
+	.sp-slider
+
+		&__arrows
+			right: 30px
+			bottom: 40px

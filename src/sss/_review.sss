@@ -1,0 +1,81 @@
+.review
+	&-cont
+		padding: 100px 0
+		margin: 100px 0 0
+		background-color: #F6F7F9
+
+	&__title
+		font-weight: bold
+		font-size: 33px
+		line-height: 40px
+		text-align: center
+		margin-bottom: 20px
+
+	&__text
+		font-size: 14px
+		line-height: 150%
+		text-align: center
+
+	&__list
+		margin-top: 60px
+		position: relative
+
+		.swiper-list
+			overflow: visible
+
+		.swiper-button
+			position: absolute calc(50% - 15px) * * *
+
+			&-next
+				right: -15px
+
+			&-prev
+				left: -15px
+
+		.swiper-slide:not(.swiper-slide-active)
+			opacity: .5 
+
+
+	&__item
+		background-color: #fff
+		padding: 60px 80px
+		border-radius: 10px 
+
+		&-name 
+			position: relative
+			font-weight: 600
+			font-size: 20px
+			line-height: 24px
+			display: flex
+			align-items: center
+			margin-bottom: 25px
+
+			&:before
+				content: ''
+				size: 50px
+				display: block
+				border-radius: 50%
+				background-color: var(--main-color)
+				background-image: url('../img/ico-user.svg')
+				background-repeat: no-repeat
+				background-position: 50%
+				margin-right: 25px
+
+@media (max-width: 1500px)
+	
+	.review-cont
+		padding: 50px 0
+		margin: 50px 0 0
+
+
+@media (max-width: 1000px)
+	
+	.review__title
+		br
+			display: none
+
+	.review__list
+		margin-top: 40px
+
+	.review__item
+		padding: 40px 50px

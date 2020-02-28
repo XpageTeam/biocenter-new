@@ -1,0 +1,175 @@
+
+.main-screen
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+	&-cont
+		background: url('../img/main-screen-bg.svg') no-repeat center, #F6625B
+		background-size: cover
+		min-height: 100vh
+		color: #fff
+		padding: 170px 0 40px
+
+	&__title
+		font-weight: bold
+		font-size: em(45)
+		line-height: calc(51 / 45)
+		margin-bottom: 35px
+
+	&__text
+		font-size: em(18)
+		line-height: calc(24 / 18)
+
+	&__btn
+		margin-top: 60px
+		display: flex
+		justify-content: center
+
+
+.ms-form
+	max-width: 520px
+	background-color: #fff
+	border-radius: 10px
+	padding: 45px
+	color: #000
+	margin-left: 30px
+
+	&__title
+		font-weight: bold
+		font-size: em(24)
+		line-height: calc(26 / 24)
+		margin-bottom: 15px
+		text-align: center
+		color: var(--main-color)
+
+	&__text
+		text-align: center
+
+	&__btn
+		margin-top: 40px
+		display: flex
+		justify-content: center
+
+
+.partners
+	margin: 60px 0 50px
+
+	&__list
+		display: flex
+		justify-content: center
+		align-items: center
+
+	&__item
+		&:not(:last-child)
+			margin-right: 60px
+
+.get-info
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin: 0 0 -50px -50px
+
+	&__item
+		width: calc((100% - 50px * 3) / 3)
+		margin: 0 0 50px 50px
+		border: 1px dashed #fff
+		border-radius: 10px
+		padding: 30px
+		display: flex
+		flex-direction: column
+		color: inherit
+		transition: background .3s ease-in-out, color .3s ease-in-out 
+
+		&:hover
+			background-color: #fff
+			color: #000
+
+
+		&-title
+			font-weight: 500
+			font-size: em(18)
+			line-height: calc(26 / 18)
+			margin-bottom: 10px
+
+		&-text
+
+			font-size: em(14)
+			line-height: calc(26 / 14)
+			margin-top: auto
+			
+			&:after
+				content: ''
+				display: inline-block
+				size: 6px
+				border-top: 1px solid currentColor
+				border-right: 1px solid currentColor
+				transform: rotate(45deg)
+				margin-left: 10px
+
+@media (min-width: 1920px)
+	.main-screen
+
+		&-cont
+			min-height: auto
+			padding-bottom: 100px
+			
+@media (max-width: 1500px)
+	
+	.main-screen
+		&-cont
+			padding-top: 100px
+	
+		&__btn
+			margin-top: 40px
+
+	.partners
+		margin: 40px 0
+
+	.get-info__item
+		padding: 20px
+
+	.ms-form
+		padding: 30px
+
+	.main-screen__title
+		margin-bottom: 30px
+
+
+@media (max-width: 1200px)
+	
+	.ms-form
+		max-width: 440px
+
+		&__btn
+			margin-top: 20px
+
+	.get-info
+		&__list
+			margin: 0 0 -20px -20px
+
+		&__item
+			width: calc((100% - 20px * 3) / 3)
+			margin: 0 0 20px 20px
+
+
+@media (max-width: 1000px)
+	
+	.main-screen
+		&__title
+			font-size: 2.4em
+
+		&__text
+			br
+				display: none
+
+		&-cont
+			min-height: auto
+
+	.ms-form
+		max-width: 355px
+		flex: none
+		padding: 20px
+
+	.get-info__item
+		width: calc((100% - 60px)/2)

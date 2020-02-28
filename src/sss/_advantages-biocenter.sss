@@ -1,0 +1,55 @@
+.advantages-biocenter
+	&-cont
+		margin: 100px 0
+
+.ab
+	&__title
+		font-weight: bold
+		font-size: em(33)
+		line-height: calc(40 / 33)
+		margin-bottom: 110px
+		text-align: center
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin: 0 0 -45px -45px
+
+	&__item
+		width: calc((100% - 45px * 4) / 4)
+		margin: 0 0 45px 45px
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		&-ico
+			margin-bottom: 20px
+
+		&-title
+			text-align: center
+			font-weight: 500
+			font-size: em(18)
+			line-height: calc(26 / 18)
+			margin-bottom: 10px
+
+		&-text
+			text-align: center
+			line-height: calc(26 / 14)
+
+@media (max-width: 1500px)
+	
+	.advantages-biocenter
+		&-cont
+			margin: 50px 0
+
+	.ab__title
+		margin-bottom: 40px
+
+
+@media (max-width: 1000px)
+	
+	.ab__title
+		font-size: 2em
+
+	.ab__item
+		width: calc((100% - 45px * 2)/2)

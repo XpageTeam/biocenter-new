@@ -1,0 +1,11 @@
+.paginator-cont
+	ul.paginator
+		li.paginator__arrow
+			a.paginator-arrow(href="#")
+		- for (let i = 1; i <= 7; i++)
+			li
+				a.paginator__link(href="#")=i
+		li.paginator__arrow
+			a.paginator-arrow(href="#")
+
+	a(href="").default-btn.loading Загрузить еще
