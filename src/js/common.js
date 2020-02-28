@@ -4,6 +4,7 @@ import $ from "jquery"
 
 // import "./filter.js"
 // import "./mobile-menu.js"
+import "./forms.js"
 
 
 window.$ = $;
@@ -46,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 document.addEventListener("DOMContentLoaded", function(){
+
 	const reviewSlider = document.querySelector('.review__list .swiper-list');
 	
 	if (!reviewSlider)
@@ -78,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 document.addEventListener("DOMContentLoaded", function(){
 
-	
+
 
 });
 
